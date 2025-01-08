@@ -1,20 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import IndexPage from "./components/pages/index";
+import ProductsPage from "./components/pages/products";
 
-import Header from './components/header';
-import Footer from './components/footer';
-import styled from 'styled-components';
-import Hero from './components/hero';
-
-const AppContainer = styled.div`
-  width: 100%;
-`
 
 function App() {
   return (
-    <AppContainer>
-      <Header />
-      <Hero />
-      <Footer />
-    </AppContainer>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,19 +1,19 @@
 import styled from 'styled-components';
-import Menu from './menu';
-import ProductGrid from './product-grid';
-import Title from '../Title';
-import Button from '../button';
+import { useNavigate } from 'react-router-dom'; 
+import Title from '../../atoms/title';
+import ProductGrid from '../../molecules/product-grid';
+import Button from '../../atoms/button';
 
 const Container = styled.section`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 
-    width: 100vw;
+    width: 100%;
 `
 
-const TitleMargin = styled(Title)`
+const GridTitle = styled(Title)`
     margin-bottom: 20px; 
 `
 
@@ -36,16 +36,21 @@ const SeeMore = styled(Button)`
     }
 `
 
-function Hero() {
+function GridArea() {
+    const navigate = useNavigate();
+
+    const handleSeeMoreClick = () => {
+        navigate('/products'); 
+    };
+
     return (
         <Container>
-            <Menu />
-            <TitleMargin>Novidades</TitleMargin>
+            <GridTitle>Novidades</GridTitle>
             <ProductGrid />
             <ProductGrid />
-            <SeeMore>Ver mais produtos</SeeMore>
+            <SeeMore onClick={handleSeeMoreClick}>Ver mais produtos</SeeMore>
         </Container>
     )
 }
 
-export default Hero
+export default GridArea

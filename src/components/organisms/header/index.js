@@ -1,6 +1,6 @@
-import Logo from '../logo'
-import SearchBox from './search-box';
-import SupportBtn from './support-btn';
+import Logo from '../../atoms/logo'
+import SearchBox from '../../molecules/header-search-box';
+import SupportBtn from '../../molecules/header-support';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
@@ -21,11 +21,18 @@ const HeaderArea = styled.div`
     width: 33%;
 `
 
+const HeaderLogo = styled(Logo)`
+    @media (max-width: 430px) {
+        width: 100px;
+    }
+`
+
+
 function Header() {
     return (
         <HeaderContainer>
             <HeaderArea>
-                <Logo />
+                <HeaderLogo />
             </HeaderArea>
             <SearchBox />
             <SupportBtn />

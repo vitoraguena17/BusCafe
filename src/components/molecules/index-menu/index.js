@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import Pacote from '../../../images/pacote-cafe.png'
-import Grao from '../../../images/grao-cafe.png'
-import Capsula from '../../../images/capsula-cafe.png'
-import Sache from '../../../images/sache-cafe.png'
-import Copo from '../../../images/copo-cafe.png'
+import Pacote from '../../../images/icons/pacote-cafe.png'
+import Grao from '../../../images/icons/grao-cafe.png'
+import Capsula from '../../../images/icons/capsula-cafe.png'
+import Sache from '../../../images/icons/sache-cafe.png'
+import Copo from '../../../images/icons/copo-cafe.png'
 
 const SelectionArea = styled.div`
     display: flex;

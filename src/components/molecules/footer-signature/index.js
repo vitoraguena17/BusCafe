@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Input  from '../../input';
-import Button from '../../button';
+import Input  from '../../atoms/input';
+import Button from '../../atoms/button';
 
 const SignatureContainer = styled.div`
     width: 70%;
@@ -20,6 +20,17 @@ const InputArea = styled.div`
     gap: 15px;
 `
 
+const FooterButton = styled(Button)`
+    background-color: var(--dark-beige);
+    color: var(--dark-brown);
+
+    &:hover {
+        background-color: var(--dark-brown);
+        border: 1px solid var(--dark-beige);
+        color: var(--dark-beige)
+    }
+`
+
 function FooterSignature() {
     return (
         <SignatureContainer>
@@ -35,7 +46,7 @@ function FooterSignature() {
                     id="email-input"
                     placeholder="E-mail"
                 ></Input>
-                <Button>Assinar</Button>
+                <FooterButton>Assinar</FooterButton>
             </InputArea>
         </SignatureContainer>
     )

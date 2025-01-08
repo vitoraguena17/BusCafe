@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ProductImg1 from '../../../../images/pacote-austral-01.png';
+import ProductImg1 from '../../../images/products/pacote-austral-02.png';
 
 const Card = styled.div`
   display: flex;

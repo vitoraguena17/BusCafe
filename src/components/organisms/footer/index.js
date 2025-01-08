@@ -1,7 +1,7 @@
-import Logo from '../logo'
-import FooterContact from './footer-contact';
-import FooterResources from './footer-resources';
-import FooterSignature from './footer-signature';
+import Logo from '../../atoms/logo'
+import FooterContact from '../../molecules/footer-contact'
+import FooterResources from '../../molecules/footer-resources'
+import FooterSignature from '../../molecules/footer-signature'
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
@@ -45,7 +45,7 @@ const FooterArea = styled.div`
     } 
 `
 
-const LogoMobile = styled(Logo)`
+const FooterLogo = styled(Logo)`
 
     @media (max-width: 430px) {
         display: none;
@@ -56,7 +56,7 @@ function Footer() {
     return (
         <FooterContainer>
             <FooterArea>
-                <LogoMobile />
+                <FooterLogo />
             </FooterArea>
             <FooterOptions>
                 <FooterResources />

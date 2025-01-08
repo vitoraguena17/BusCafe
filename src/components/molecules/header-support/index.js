@@ -10,15 +10,15 @@ const SupportButton = styled.div`
     align-items: center;
 
     width: 33%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     cursor: pointer;
-    color: var(--white);
+    color: var(--dark-beige);
     gap: 15px;
     transition: .5s all;
 
     &:hover {
-    color: var(--light-beige);
+    color: var(--white);
     }
 
     @media (max-width: 430px) {
