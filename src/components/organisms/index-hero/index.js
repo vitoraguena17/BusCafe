@@ -11,7 +11,7 @@ const Container = styled.section`
     width: 100%;
 `
 
-function Hero() {
+function IndexHero() {
     return (
         <Container>
             <Menu />
@@ -20,4 +20,4 @@ function Hero() {
     )
 }
 
-export default Hero
+export default IndexHero

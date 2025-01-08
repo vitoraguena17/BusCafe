@@ -1,6 +1,6 @@
 import Header from '../../organisms/header';
 import Footer from '../../organisms/footer';
-import Hero from '../../organisms/index-hero';
+import IndexHero from '../../organisms/index-hero';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -11,7 +11,7 @@ function IndexPage() {
     return (
         <Container>
             <Header />
-            <Hero />
+            <IndexHero />
             <Footer />
         </Container>
     )

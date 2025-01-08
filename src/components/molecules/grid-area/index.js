@@ -11,16 +11,16 @@ const Container = styled.section`
     align-items: center;
 
     width: 100%;
-`
+`;
 
 const GridTitle = styled(Title)`
     margin-bottom: 20px; 
-`
+`;
 
 const SeeMore = styled(Button)`
     width: 400px;
     height: 50px;
-    margin: 30px 0 80px 0 ;
+    margin: 30px 0 80px 0;
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--dark-beige);
@@ -34,7 +34,7 @@ const SeeMore = styled(Button)`
     @media (max-width: 430px) {
         width: 250px;
     }
-`
+`;
 
 function GridArea() {
     const navigate = useNavigate();
@@ -46,11 +46,11 @@ function GridArea() {
     return (
         <Container>
             <GridTitle>Novidades</GridTitle>
-            <ProductGrid />
-            <ProductGrid />
+            <ProductGrid productCount={4} />
+            <ProductGrid productCount={4} />
             <SeeMore onClick={handleSeeMoreClick}>Ver mais produtos</SeeMore>
         </Container>
-    )
+    );
 }
 
-export default GridArea
+export default GridArea;
