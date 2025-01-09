@@ -1,4 +1,4 @@
-import logo from '../../../images/logo/logo.png';
+import logo from '../../../../images/logo/logo.png';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom'; 
 
@@ -16,7 +16,7 @@ function Logo({ className }) {
     
     return (
         <LogoImg
-            className={className} // Passa 'className' para o elemento base
+            className={className} 
             src={logo}
             alt='logo'
             onClick={handleIndexClick}

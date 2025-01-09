@@ -1,4 +1,4 @@
-import Logo from '../../atoms/logo'
+import Logo from '../../atoms/logo/light'
 import SearchBox from '../../molecules/header-search-box';
 import SupportBtn from '../../molecules/header-support';
 import styled from 'styled-components';

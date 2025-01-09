@@ -1,4 +1,4 @@
-import Logo from '../../atoms/logo'
+import Logo from '../../atoms/logo/light'
 import FooterContact from '../../molecules/footer-contact'
 import FooterResources from '../../molecules/footer-resources'
 import FooterSignature from '../../molecules/footer-signature'
