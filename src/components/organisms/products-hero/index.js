@@ -3,6 +3,7 @@ import Title from '../../atoms/title';
 import ProductGrid from '../../molecules/product-grid';
 import ProductsAside from "../../molecules/products-aside";
 import PaginationText from "../../molecules/pagination-button"
+import ProductsAsideMobile from "../../molecules/products-aside-mobile";
 
 const CustomProductCard = styled.div`
   && {
@@ -47,16 +48,20 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
 
-  width: 100%;  
+  width: 100%; 
 `
 
 const ProductsBox = styled.aside`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;  
+  align-items: center;
 
   width: 70%;
+
+  @media (max-width: 430px) {
+      width: 100%;
+  }
 `
 
 function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
@@ -64,6 +69,7 @@ function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
 
   return (
     <Container>
+      <ProductsAsideMobile />
       <ProductsTitle>Produtos</ProductsTitle>
       <Content>
         <ProductsAside />

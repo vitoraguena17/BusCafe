@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandHoldingDollar } from '@fortawesome/free-solid-svg-icons'
+import { BiDonateHeart } from "react-icons/bi";
 
 
 const SupportButton = styled.div`
@@ -10,11 +9,11 @@ const SupportButton = styled.div`
     align-items: center;
 
     width: 33%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     cursor: pointer;
     color: var(--dark-beige);
-    gap: 15px;
+    gap: 10px;
     transition: .5s all;
 
     &:hover {
@@ -35,7 +34,7 @@ function SupportBtn() {
     return (
         <SupportButton>
             <p>Contribuir</p>
-            <FontAwesomeIcon icon={faHandHoldingDollar} />
+            <BiDonateHeart />
         </SupportButton>
     )
 }

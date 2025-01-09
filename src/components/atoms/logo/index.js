@@ -10,7 +10,7 @@ const LogoImg = styled.img`
 function Logo({ className }) {
     const navigate = useNavigate();
 
-    const handleSeeMoreClick = () => {
+    const handleIndexClick = () => {
         navigate('/'); 
     };
     
@@ -19,7 +19,7 @@ function Logo({ className }) {
             className={className} // Passa 'className' para o elemento base
             src={logo}
             alt='logo'
-            onClick={handleSeeMoreClick}
+            onClick={handleIndexClick}
         />
     );
 }
