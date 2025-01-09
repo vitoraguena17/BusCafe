@@ -8,7 +8,7 @@ const PaginationWrapper = styled.div`
   color: var(--dark-brown);
   font-size: 1.3rem;
   user-select: none;
-  margin: 20px 0px 40px 0;
+  margin: 20px 0px 50px 0;
 
   span, a {
     color: var(--dark-brown);
