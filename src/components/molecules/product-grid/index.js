@@ -7,7 +7,7 @@ const ProductSection = styled.section`
   justify-content: center;
   align-items: center;
 
-  width: 100%;
+  width: 80%;
   margin: 10px;
   gap: 10px;
 
@@ -19,9 +19,9 @@ const ProductSection = styled.section`
   }
 `;
 
-function ProductGrid({ productCount = 4 }) {
+function ProductGrid({ productCount = 4, customCard = null }) {
   const products = Array.from({ length: productCount }, (_, index) => (
-    <Product key={index} />
+    <Product key={index} CustomCard={customCard} /> 
   ));
 
   return <ProductSection>{products}</ProductSection>;
