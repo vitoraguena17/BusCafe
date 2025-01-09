@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ProductImg1 from '../../../images/products/pacote-austral-02.png';
+import ProductImage from '../../atoms/product-img';
 
 const Card = styled.div`
   display: flex;
@@ -22,18 +22,6 @@ const Card = styled.div`
     width: 90%; 
     padding: 20px; 
     border-width: 1px;
-  }
-`;
-
-const ProductImg = styled.img`
-  background-color: rgba(214, 205, 175, 0.5);
-  width: 95%;
-  padding: 20px;
-  border-radius: 10px;
-
-  @media (max-width: 430px) {
-    width: 80%; 
-    padding: 20px; 
   }
 `;
 
@@ -74,11 +62,11 @@ const ProductPrice = styled.div`
 `;
 
 function Product({ CustomCard }) {
-  const CardComponent = CustomCard || Card; 
+  const CardComponent = CustomCard || Card;
 
   return (
     <CardComponent>
-      <ProductImg src={ProductImg1} alt="Pacote de Café" />
+      <ProductImage />
       <ProductDesc>
         <p>Café Austral - Moído - 500g</p>
         <ProductPrice>
