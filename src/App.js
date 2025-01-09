@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<IndexPage />} />
         <Route path="/products" element={<ProductsPage />} />
+        <Route path="/product" element={<ProductPage />} />
       </Routes>
     </BrowserRouter>
   );
