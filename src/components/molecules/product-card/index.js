@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import ProductImage from '../../atoms/product-img';
+import { useNavigate } from 'react-router-dom';
 
 const Card = styled.div`
   display: flex;
@@ -64,8 +65,14 @@ const ProductPrice = styled.div`
 function Product({ CustomCard }) {
   const CardComponent = CustomCard || Card;
 
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+      navigate('/product'); 
+  };
+
   return (
-    <CardComponent>
+    <CardComponent onClick={handleCardClick}>
       <ProductImage />
       <ProductDesc>
         <p>Café Austral - Moído - 500g</p>
