@@ -43,6 +43,7 @@ const ButtonLogo = styled.button`
     gap: 10px;
     cursor: pointer;
     transition: .3s ease-in-out;
+    background-color: transparent;
 
     p {
         font-size: 1rem;
