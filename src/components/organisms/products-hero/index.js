@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Title from '../../atoms/title';
 import ProductGrid from '../../molecules/product-grid';
 import ProductsAside from "../../molecules/products-aside";
+import PaginationText from "../../molecules/pagination-button"
 
 const Container = styled.section`
   display: flex;
@@ -42,6 +43,7 @@ function ProductsHero({ totalProducts = 9, productsPerGrid = 3 }) {
           ))}
         </ProductsBox>
       </Content>
+      <PaginationText />
     </Container>
   );
 }
