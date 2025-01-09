@@ -48,7 +48,7 @@ const FooterArea = styled.div`
 const FooterLogo = styled(Logo)`
 
     @media (max-width: 430px) {
-        display: none;
+        width: 200px;
     } 
 `
 

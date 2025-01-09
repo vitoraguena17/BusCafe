@@ -7,7 +7,7 @@ const Card = styled.div`
   align-items: center;
   flex-direction: column;
 
-  width: 24%;
+  width: 25%;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 30px;
@@ -19,21 +19,21 @@ const Card = styled.div`
   }
 
   @media (max-width: 430px) {
-    width: 90%; /* Ocupa quase todo o espaço disponível */
-    padding: 20px; /* Reduz o padding */
-    border-width: 1px; /* Ajusta a espessura da borda */
+    width: 90%; 
+    padding: 20px; 
+    border-width: 1px;
   }
 `;
 
 const ProductImg = styled.img`
   background-color: rgba(214, 205, 175, 0.5);
-  width: 300px;
-  padding: 30px;
+  width: 95%;
+  padding: 20px;
   border-radius: 10px;
 
   @media (max-width: 430px) {
-    width: 80%; /* Ajusta o tamanho da imagem */
-    padding: 20px; /* Reduz o padding */
+    width: 80%; 
+    padding: 20px; 
   }
 `;
 
@@ -41,7 +41,7 @@ const ProductDesc = styled.div`
   margin-top: 20px;
 
   @media (max-width: 430px) {
-    margin-top: 10px; /* Reduz o espaçamento */
+    margin-top: 10px; 
   }
 `;
 
@@ -58,7 +58,7 @@ const ProductPrice = styled.div`
     font-weight: 300;
 
     @media (max-width: 430px) {
-      font-size: 0.7rem; /* Ajusta o tamanho da fonte */
+      font-size: 0.7rem; 
     }
   }
 
@@ -68,14 +68,16 @@ const ProductPrice = styled.div`
     color: var(--dark-green);
 
     @media (max-width: 430px) {
-      font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+      font-size: 1.2rem; 
     }
   }
 `;
 
-function Product() {
+function Product({ CustomCard }) {
+  const CardComponent = CustomCard || Card; 
+
   return (
-    <Card>
+    <CardComponent>
       <ProductImg src={ProductImg1} alt="Pacote de Café" />
       <ProductDesc>
         <p>Café Austral - Moído - 500g</p>
@@ -86,8 +88,9 @@ function Product() {
           </p>
         </ProductPrice>
       </ProductDesc>
-    </Card>
+    </CardComponent>
   );
 }
 
 export default Product;
+
