@@ -13,9 +13,9 @@ const Container = styled.div`
     @media (max-width: 430px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        width: 85%;
+        width: 80%;
     }
-`;
+`;  
 
 function CardContent() {
     return (
