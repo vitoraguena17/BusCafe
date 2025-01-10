@@ -24,7 +24,7 @@ const SupportButton = styled.div`
     }
 
     @media(max-width: 430px) {
-        width: 25%;
+        width: 30%;
 
         p {
             display: none;

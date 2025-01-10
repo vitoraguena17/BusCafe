@@ -44,7 +44,6 @@ const DataInput = styled.input`
 const Option2Popup = ({ isOpen, onClose }) => (
   <PopupBaseStyled isOpen={isOpen} onClose={onClose}>
     <InputArea>
-
       <InputSection>
         <DataInput
           placeholder='Marca'
@@ -83,7 +82,6 @@ const Option2Popup = ({ isOpen, onClose }) => (
           placeholder='Link do produto'
         />
       </InputSection>
-
       <InputSection>
         <DataInput
           placeholder='Sensorial'
@@ -122,7 +120,6 @@ const Option2Popup = ({ isOpen, onClose }) => (
           placeholder='Nota BSCA'
         />
       </InputSection>
-
     </InputArea>
     <AddButton>Salvar</AddButton>
   </PopupBaseStyled>

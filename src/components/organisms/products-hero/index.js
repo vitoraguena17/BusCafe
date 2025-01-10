@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { useMediaQuery } from "react-responsive"; // Importação do hook
 import Title from '../../atoms/title';
 import ProductGrid from '../../molecules/product-grid';
 import ProductsAside from "../../molecules/products-aside";
-import PaginationText from "../../molecules/pagination-button"
+import PaginationText from "../../molecules/pagination-button";
 import ProductsAsideMobile from "../../molecules/products-aside-mobile";
 
 const CustomProductCard = styled.div`
@@ -29,11 +30,11 @@ const CustomProductCard = styled.div`
       border-width: 1px;
     }
   }
-`
+`;
 
 const ProductsTitle = styled(Title)`
   margin: 30px 0;
-`
+`;
 
 const Container = styled.section`
   display: flex;
@@ -42,14 +43,14 @@ const Container = styled.section`
   justify-content: center;
 
   width: 100%;
-`
+`;
 
 const Content = styled.div`
   display: flex;
   justify-content: center;
 
   width: 100%; 
-`
+`;
 
 const ProductsBox = styled.aside`
   display: flex;
@@ -62,10 +63,12 @@ const ProductsBox = styled.aside`
   @media (max-width: 430px) {
       width: 100%;
   }
-`
+`;
 
 function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
-  const totalGrids = Math.ceil(totalProducts / productsPerGrid);
+  const isMobile = useMediaQuery({ maxWidth: 430 });
+  const itemsPerGrid = isMobile ? 2 : productsPerGrid;
+  const totalGrids = Math.ceil(totalProducts / itemsPerGrid);
 
   return (
     <Container>
@@ -77,7 +80,7 @@ function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
           {Array.from({ length: totalGrids }).map((_, index) => (
             <ProductGrid
               key={index}
-              productCount={productsPerGrid}
+              productCount={itemsPerGrid} 
               customCard={CustomProductCard}
             />
           ))}
@@ -85,7 +88,7 @@ function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
       </Content>
       <PaginationText />
     </Container>
-  )
+  );
 }
 
 export default ProductsHero;

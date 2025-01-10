@@ -11,7 +11,6 @@ const Container = styled.section`
 
     width: 20%;
     background-color: var(--light-grey);
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
     padding: 30px;
     border-radius: 10px;
 

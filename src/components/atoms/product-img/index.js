@@ -8,8 +8,8 @@ const ProductImg = styled.img`
   border-radius: 10px;
 
   @media (max-width: 430px) {
-    width: 80%; 
-    padding: 20px; 
+    width: 90%; 
+    padding: 0px;
   }
 `;
 
