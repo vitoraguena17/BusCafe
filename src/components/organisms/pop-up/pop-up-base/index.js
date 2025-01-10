@@ -52,7 +52,7 @@ const Container = styled.div`
     }
 
     @media (max-width: 430px) {
-        top: 55%;
+        top: 60%;
         width: 80%;
     }
 `;
