@@ -1,33 +1,54 @@
 import styled from "styled-components"
-import Title from "../../atoms/title"
+import ProductInformationTitle from "../../molecules/product-title-info"
 import ProductImage from "../../atoms/product-img"
+import Button from "../../atoms/button"
 
 const Container = styled.section`
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
 
-    background-color: var(--light-grey);
+    width: 50%;
+
     padding: 30px;
     border-radius: 10px;
+
+    margin: 50px;
+
+    @media (max-width: 430px) {
+    width: 95%; 
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const Content = styled.div`
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 430px) {
+    width: 100%; 
+  }
+`
+
+const ProductImageInfo = styled(ProductImage)`
+  width: 50%;
+
+  @media (max-width: 430px) {
+    width: 100%; 
+  }
 `
 
 const ProductPrice = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  gap: 10px;
-
   p {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     font-weight: 300;
 
     @media (max-width: 430px) {
@@ -36,7 +57,7 @@ const ProductPrice = styled.div`
   }
 
   span {
-    font-size: 1.5rem;
+    font-size: 2.7rem;
     font-weight: 500;
     color: var(--dark-green);
 
@@ -46,21 +67,29 @@ const ProductPrice = styled.div`
   }
 `
 
+const ButtonBuy = styled(Button)`
+  padding: 0 20% 0 20%;
+  height: 60px;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+`
+
 function ProductInformation() {
-    return (
-        <Container>
-            <ProductImage />
-            <Content>
-            <Title>Café Austral - Moído</Title>
-            <ProductPrice>
-                <p>A partir de:</p>
-                <p>
-                    <span>R$ 49,99</span>
-                </p>
-            </ProductPrice>
-            </Content>
-        </Container>
-    )
+  return (
+    <Container>
+      <ProductImageInfo />
+      <Content>
+        <ProductInformationTitle />
+        <ProductPrice>
+          <p>A partir de:</p>
+          <p>
+            <span>R$ 49,99</span>
+          </p>
+        </ProductPrice>
+        <ButtonBuy>Ir a loja</ButtonBuy>
+      </Content>
+    </Container>
+  )
 }
 
 export default ProductInformation

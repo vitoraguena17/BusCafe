@@ -13,10 +13,10 @@ const ProductImg = styled.img`
   }
 `;
 
-function ProductImage({ className }) {
-  return (
-    <ProductImg src={ProductImg1} alt="Pacote de Café" className={className} />
-  )
+function ProductImage({className}) {
+    return (
+        <ProductImg src={ProductImg1} alt="Pacote de Café" className={className}/>
+    )
 }
 
 export default ProductImage
