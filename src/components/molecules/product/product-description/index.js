@@ -12,20 +12,29 @@ const Container = styled.section`
 
 const ProductText = styled.div`
     width: 70%;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   p {
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 10px;
 
     @media (max-width: 430px) {
-      font-size: 0.7rem; 
+      font-size: 1rem; 
     }
+  }
+
+  @media (max-width: 430px) {
+      width: 90%; 
   }
 `
 
 const TitleInfo = styled(Title)`
     margin: 10px 0 30px 0;
+    width: 70%;
+
+    @media (max-width: 430px) {
+      width: 90%; 
+    }
 `
 
 function ProductDescription() {
