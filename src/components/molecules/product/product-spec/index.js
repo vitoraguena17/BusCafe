@@ -9,17 +9,33 @@ const Container = styled.section`
 
     width: 100%;
     text-align: justify;
+
 `
 
 const TitleInfo = styled(Title)`
     margin: 10px 0 30px 0;
+    width: 70%;
+
+    @media (max-width: 430px) {
+        width: 100%;
+    }
+`
+
+const Content = styled.div`
+    width: 70%;
+
+    @media (max-width: 430px) {
+        width: 90%;
+    }
 `
 
 function ProductTable() {
     return (
         <Container>
-            <TitleInfo>Especificações</TitleInfo>
-            <ProductSpecTable />
+            <Content>
+                <TitleInfo>Especificações</TitleInfo>
+                <ProductSpecTable />
+            </Content>
         </Container>
     )
 }

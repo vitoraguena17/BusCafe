@@ -11,6 +11,11 @@ const SignaturTitle = styled.h3`
     color: var(--dark-beige);
     margin-bottom: 15px;
     text-align:center;
+
+    @media (max-width: 430px) {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
 `
 
 const InputArea = styled.div`

@@ -4,20 +4,22 @@ import ProductImage from "../../../atoms/product-img"
 import Button from "../../../atoms/button"
 
 const Container = styled.section`
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    width: 50%;
+  width: 50%;
 
-    padding: 30px;
-    border-radius: 10px;
+  padding: 30px;
+  border-radius: 10px;
 
-    margin: 50px;
+  margin: 30px 0 20px 0;
 
-    @media (max-width: 430px) {
-    width: 95%; 
+  @media (max-width: 430px) {
+    width: 90%; 
+    padding: 0;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0 0 0;
   }
 `
 
@@ -29,7 +31,8 @@ const Content = styled.div`
     align-items: center;
 
     @media (max-width: 430px) {
-    width: 100%; 
+      width: 100%; 
+      height: 250px;
   }
 `
 
@@ -52,7 +55,7 @@ const ProductPrice = styled.div`
     font-weight: 300;
 
     @media (max-width: 430px) {
-      font-size: 0.7rem; 
+      font-size: 1rem; 
     }
   }
 
@@ -62,7 +65,7 @@ const ProductPrice = styled.div`
     color: var(--dark-green);
 
     @media (max-width: 430px) {
-      font-size: 1.2rem; 
+      font-size: 2.2rem; 
     }
   }
 `
