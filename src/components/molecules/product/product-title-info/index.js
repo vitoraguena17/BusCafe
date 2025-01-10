@@ -1,12 +1,9 @@
 import styled from "styled-components"
-import Title from "../../atoms/title"
+import Title from "../../../atoms/title"
 
 const Container = styled.section`
     display: flex;
     flex-direction: column;
-
-    width: 100%;
-    text-align: center;
 `
 
 const ProductID = styled.div`

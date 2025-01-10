@@ -1,7 +1,8 @@
 import styled from "styled-components"
-import ProductInformationTitle from "../../molecules/product-title-info"
-import ProductImage from "../../atoms/product-img"
-import Button from "../../atoms/button"
+import ProductInformationTitle from "../product-title-info"
+import ProductImage from "../../../atoms/product-img"
+import Button from "../../../atoms/button"
+import ProductRating from "../product-rating"
 
 const Container = styled.section`
     display: flex;
@@ -69,7 +70,7 @@ const ProductPrice = styled.div`
 
 const ButtonBuy = styled(Button)`
   padding: 0 20% 0 20%;
-  height: 60px;
+  height: 50px;
   font-size: 1.8rem;
   margin-bottom: 30px;
 `

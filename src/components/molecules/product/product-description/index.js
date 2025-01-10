@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Title from "../../atoms/title"
+import Title from "../../../atoms/title"
 
 const Container = styled.section`
     display: flex;

@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import Title from "../../atoms/title"
-import ProductSpecTable from "../../atoms/spec-table"
+import Title from "../../../atoms/title"
+import ProductSpecTable from "../../../atoms/spec-table"
 
 const Container = styled.section`
     display: flex;
