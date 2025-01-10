@@ -10,7 +10,7 @@ const Container = styled.section`
   width: 100%;
 `
 
-function ProductsHero() {
+function ProductHero() {
 
   return (
     <Container>
@@ -19,4 +19,4 @@ function ProductsHero() {
   )
 }
 
-export default ProductsHero;
+export default ProductHero;

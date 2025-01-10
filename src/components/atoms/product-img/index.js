@@ -13,9 +13,9 @@ const ProductImg = styled.img`
   }
 `;
 
-function ProductImage() {
+function ProductImage({className}) {
     return (
-        <ProductImg src={ProductImg1} alt="Pacote de Café" />
+        <ProductImg src={ProductImg1} alt="Pacote de Café" className={className}/>
     )
 }
 

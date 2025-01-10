@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     --earthy-red: #8B3A3A;
     /*grey-group*/
     --light-grey: #F6F6F6;
+    --medium-grey: #A9A9A9
   }
 
   body {
