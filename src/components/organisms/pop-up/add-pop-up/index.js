@@ -9,7 +9,7 @@ const AddButton = styled(Button)`
 `
 
 const PopupBaseStyled = styled(PopupBase)`
-
+  top: 30px;
 `
 
 const InputArea = styled.div`

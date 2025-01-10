@@ -44,6 +44,7 @@ const ButtonLogo = styled.button`
     cursor: pointer;
     transition: .3s ease-in-out;
     background-color: transparent;
+    color: var(--black);
 
     p {
         font-size: 1rem;
