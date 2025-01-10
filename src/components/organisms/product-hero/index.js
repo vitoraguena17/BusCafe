@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import ProductInformation from "../../molecules/product-information"
+import ProductDescription from "../../molecules/product-description"
+import ProductTable from "../../molecules/product-spec"
 
 const Container = styled.section`
   display: flex;
@@ -15,6 +17,8 @@ function ProductHero() {
   return (
     <Container>
         <ProductInformation />
+        <ProductDescription />
+        <ProductTable />
     </Container>
   )
 }
