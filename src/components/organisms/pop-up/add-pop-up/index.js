@@ -9,7 +9,7 @@ const AddButton = styled(Button)`
 `
 
 const PopupBaseStyled = styled(PopupBase)`
-  top: 30px;
+  
 `
 
 const InputArea = styled.div`
@@ -42,7 +42,10 @@ const DataInput = styled.input`
 `
 
 const Option2Popup = ({ isOpen, onClose }) => (
-  <PopupBaseStyled isOpen={isOpen} onClose={onClose}>
+  <PopupBaseStyled
+    isOpen={isOpen}
+    onClose={onClose}
+  >
     <InputArea>
       <InputSection>
         <DataInput
