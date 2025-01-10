@@ -2,7 +2,6 @@ import styled from "styled-components"
 import ProductInformationTitle from "../product-title-info"
 import ProductImage from "../../../atoms/product-img"
 import Button from "../../../atoms/button"
-import ProductRating from "../product-rating"
 
 const Container = styled.section`
     display: flex;
