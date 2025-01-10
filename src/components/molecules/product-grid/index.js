@@ -13,7 +13,12 @@ const ProductSection = styled.section`
 
   @media (max-width: 430px) {
     flex-wrap: wrap; 
-    & > *:nth-child(n + 2) {
+    justify-content: space-around; 
+    width: 90%;
+    & > * {
+      flex: 0 1 calc(50% - 10px); 
+    }
+    & > *:nth-child(n + 3) { 
       display: none; 
     }
   }
@@ -21,7 +26,7 @@ const ProductSection = styled.section`
 
 function ProductGrid({ productCount = 4, customCard = null }) {
   const products = Array.from({ length: productCount }, (_, index) => (
-    <Product key={index} CustomCard={customCard} /> 
+    <Product key={index} CustomCard={customCard} />
   ));
 
   return <ProductSection>{products}</ProductSection>;

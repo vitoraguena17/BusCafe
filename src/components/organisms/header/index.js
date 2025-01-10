@@ -19,6 +19,10 @@ const HeaderArea = styled.div`
     justify-content: center;
     align-items: center;
     width: 33%;
+
+    @media (max-width: 430px) {
+      width: 30%;
+    }
 `
 
 const HeaderLogo = styled(Logo)`
@@ -29,15 +33,15 @@ const HeaderLogo = styled(Logo)`
 
 
 function Header() {
-    return (
-        <HeaderContainer>
-            <HeaderArea>
-                <HeaderLogo />
-            </HeaderArea>
-            <SearchBox />
-            <SupportBtn />
-        </HeaderContainer>
-    )
+  return (
+    <HeaderContainer>
+      <HeaderArea>
+        <HeaderLogo />
+      </HeaderArea>
+      <SearchBox />
+      <SupportBtn />
+    </HeaderContainer>
+  )
 }
 
 export default Header

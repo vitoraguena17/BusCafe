@@ -9,9 +9,9 @@ const Card = styled.div`
   flex-direction: column;
 
   width: 25%;
+  padding: 30px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 30px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 
@@ -21,8 +21,8 @@ const Card = styled.div`
 
   @media (max-width: 430px) {
     width: 90%; 
-    padding: 20px; 
     border-width: 1px;
+    padding: 10px;
   }
 `;
 
@@ -60,7 +60,7 @@ const ProductPrice = styled.div`
       font-size: 1.2rem; 
     }
   }
-`;
+`
 
 function Product({ CustomCard }) {
   const CardComponent = CustomCard || Card;
@@ -68,7 +68,7 @@ function Product({ CustomCard }) {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-      navigate('/product'); 
+    navigate('/product');
   };
 
   return (

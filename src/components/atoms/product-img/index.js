@@ -8,15 +8,15 @@ const ProductImg = styled.img`
   border-radius: 10px;
 
   @media (max-width: 430px) {
-    width: 80%; 
-    padding: 20px; 
+    width: 90%; 
+    padding: 0px;
   }
 `;
 
-function ProductImage() {
-    return (
-        <ProductImg src={ProductImg1} alt="Pacote de Café" />
-    )
+function ProductImage({ className }) {
+  return (
+    <ProductImg src={ProductImg1} alt="Pacote de Café" className={className} />
+  )
 }
 
 export default ProductImage

@@ -12,7 +12,7 @@ const SearchLabel = styled.label`
     padding: 0 10px;
 
     @media (max-width: 430px) {
-        width: 42%;
+        width: 40%;
     }
 `
 
