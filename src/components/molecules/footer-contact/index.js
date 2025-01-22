@@ -3,6 +3,12 @@ import styled from 'styled-components';
 const Contact = styled.div`
     color: var(--dark-beige);
     width: 30%;
+
+    @media (max-width: 500px) {
+        width: 100%;
+        text-align: center;
+        margin-top:50px;
+    } 
 `
 
 const FooterTitle = styled.h3`
