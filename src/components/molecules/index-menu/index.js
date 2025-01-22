@@ -11,13 +11,12 @@ const SelectionArea = styled.div`
     align-items: center;
     flex-direction: column;
 
-    width: 40%;
-    padding: 10px;
+    padding: 10px 40px;
     background-color: var(--light-grey);
     border-radius: 10px;
     margin: 40px;
 
-    @media (max-width: 430px) {
+    @media (max-width: 600px) {
         width: 90%;
     }
 `
@@ -30,7 +29,7 @@ const ButtonArea = styled.div`
     align-items: center;
     margin-top: 20px;
 
-    @media (max-width: 430px) {
+    @media (max-width: 600px) {
         gap: 10px;
     }
 `
