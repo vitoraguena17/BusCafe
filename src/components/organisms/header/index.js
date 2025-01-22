@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const HeaderContainer = styled.header`
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     width: 100%;
@@ -18,7 +18,7 @@ const HeaderArea = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33%;
+    width: 30%;
 
     @media (max-width: 430px) {
       width: 30%;
@@ -26,11 +26,10 @@ const HeaderArea = styled.div`
 `
 
 const HeaderLogo = styled(Logo)`
-    @media (max-width: 430px) {
+    @media (max-width: 600px) {
         width: 100px;
     }
 `
-
 
 function Header() {
   return (
@@ -38,10 +37,21 @@ function Header() {
       <HeaderArea>
         <HeaderLogo />
       </HeaderArea>
-      <SearchBox />
       <SupportBtn />
     </HeaderContainer>
   )
+/* ANTIGO ----------------------------------------------------------------
+  function Header() {
+    return (
+      <HeaderContainer>
+        <HeaderArea>
+          <HeaderLogo />
+        </HeaderArea>
+       <SearchBox />
+        <SupportBtn />
+      </HeaderContainer>
+    )
+*/
 }
 
 export default Header

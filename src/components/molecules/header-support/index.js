@@ -11,7 +11,7 @@ const SupportButton = styled.div`
     justify-content: center;
     align-items: center;
 
-    width: 33%;
+    width: 28%;
     font-size: 1.5rem;
     font-weight: 300;
     cursor: pointer;
@@ -23,8 +23,8 @@ const SupportButton = styled.div`
         color: var(--white);
     }
 
-    @media(max-width: 430px) {
-        width: 30%;
+    @media(max-width: 600px) {
+        width: 20%;
 
         p {
             display: none;
