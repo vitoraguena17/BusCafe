@@ -66,7 +66,7 @@ const ProductsBox = styled.aside`
 `;
 
 function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
-  const isMobile = useMediaQuery({ maxWidth: 600 });
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
   const itemsPerGrid = isMobile ? 2 : productsPerGrid;
   const totalGrids = Math.ceil(totalProducts / itemsPerGrid);
 

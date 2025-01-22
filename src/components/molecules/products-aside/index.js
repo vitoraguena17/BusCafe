@@ -14,6 +14,18 @@ const Container = styled.section`
     padding: 30px;
     border-radius: 10px;
 
+    @media (max-width: 1250px) {
+        width: 25%;
+    }
+
+    @media (max-width: 1000px) {
+        width: 30%;
+    }
+
+    @media (max-width: 800px) {
+        width: 35%;
+    }
+
     @media (max-width: 600px) {
         display: none
     }
