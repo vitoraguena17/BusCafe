@@ -51,9 +51,13 @@ const Container = styled.div`
         padding: 0 30px;
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: 1100px) {
+      width: 65%;
+    }
+
+    @media (max-width: 500px) {
         top: 55%;
-        width: 80%;
+        width: 85%;
     }
 `;
 
