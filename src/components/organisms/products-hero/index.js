@@ -24,7 +24,7 @@ const CustomProductCard = styled.div`
       transform: scale(1.02);
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: 600px) {
       width: 90%; 
       padding: 20px; 
       border-width: 1px;
@@ -60,13 +60,13 @@ const ProductsBox = styled.aside`
 
   width: 70%;
 
-  @media (max-width: 430px) {
+  @media (max-width: 600px) {
       width: 100%;
   }
 `;
 
 function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
-  const isMobile = useMediaQuery({ maxWidth: 430 });
+  const isMobile = useMediaQuery({ maxWidth: 600 });
   const itemsPerGrid = isMobile ? 2 : productsPerGrid;
   const totalGrids = Math.ceil(totalProducts / itemsPerGrid);
 

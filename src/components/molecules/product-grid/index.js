@@ -11,7 +11,7 @@ const ProductSection = styled.section`
   margin: 10px;
   gap: 10px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 600px) {
     flex-wrap: wrap; 
     justify-content: space-around; 
     width: 90%;

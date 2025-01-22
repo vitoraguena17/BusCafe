@@ -15,7 +15,7 @@ const Container = styled.section`
     background-color: var(--light-grey);
     padding: 30px;
 
-    @media (min-width: 440px) {
+    @media (min-width: 600px) {
         display: none;
     }
 `;

@@ -19,7 +19,7 @@ const Card = styled.div`
     transform: scale(1.02);
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: 600px) {
     width: 90%; 
     border-width: 1px;
     padding: 10px;
@@ -29,7 +29,7 @@ const Card = styled.div`
 const ProductDesc = styled.div`
   margin-top: 20px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 600px) {
     margin-top: 10px; 
   }
 `;
@@ -46,7 +46,7 @@ const ProductPrice = styled.div`
     font-size: 0.8rem;
     font-weight: 300;
 
-    @media (max-width: 430px) {
+    @media (max-width: 600px) {
       font-size: 0.7rem; 
     }
   }
@@ -56,7 +56,7 @@ const ProductPrice = styled.div`
     font-weight: 500;
     color: var(--dark-green);
 
-    @media (max-width: 430px) {
+    @media (max-width: 600px) {
       font-size: 1.2rem; 
     }
   }
