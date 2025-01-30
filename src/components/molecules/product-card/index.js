@@ -1,6 +1,8 @@
-import styled from 'styled-components';
-import ProductImage from '../../atoms/product-img';
-import { useNavigate } from 'react-router-dom';
+import styled from "styled-components";
+import ProductImage from "../../atoms/product-img";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import axios from "axios";
 
 const Card = styled.div`
   display: flex;
@@ -20,7 +22,7 @@ const Card = styled.div`
   }
 
   @media (max-width: 600px) {
-    width: 90%; 
+    width: 90%;
     border-width: 1px;
     padding: 10px;
   }
@@ -30,7 +32,7 @@ const ProductDesc = styled.div`
   margin-top: 20px;
 
   @media (max-width: 600px) {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 `;
 
@@ -47,7 +49,7 @@ const ProductPrice = styled.div`
     font-weight: 300;
 
     @media (max-width: 600px) {
-      font-size: 0.7rem; 
+      font-size: 0.7rem;
     }
   }
 
@@ -57,10 +59,10 @@ const ProductPrice = styled.div`
     color: var(--dark-green);
 
     @media (max-width: 600px) {
-      font-size: 1.2rem; 
+      font-size: 1.2rem;
     }
   }
-`
+`;
 
 function Product({ CustomCard }) {
   const CardComponent = CustomCard || Card;
@@ -68,8 +70,23 @@ function Product({ CustomCard }) {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate('/product');
+    navigate("/product");
   };
+
+  const api = axios.create({
+    baseURL: "https://168.75.77.79:5000/Product",
+  });
+
+  useEffect(() => {
+    fetch("https://168.75.77.79:5000/Product")
+      .then((data) => data.json())
+      .then((data) => console.log(data));
+
+    api
+      .get("/Product")
+      .then((res) => res.data)
+      .then((data) => console.log(data));
+  }, [api]);
 
   return (
     <CardComponent onClick={handleCardClick}>
@@ -88,4 +105,3 @@ function Product({ CustomCard }) {
 }
 
 export default Product;
-
