@@ -29,15 +29,12 @@ const Option = styled.li`
     margin: 10px 0;
 `
 
-const textOptions = ['henrique@gmail.com']
-
 function FooterContact() {
     return (
         <Contact>
             <FooterTitle>Contato:</FooterTitle>
             <Options>
-                {textOptions.map((texto) => (
-                    <Option><p>{texto}</p></Option>))}
+                <Option><p>henrique@gmail.com</p></Option>
             </Options>
         </Contact>
     )

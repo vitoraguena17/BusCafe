@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom'; 
+import { useEffect, useState } from 'react';
 import Title from '../../atoms/title';
 import ProductGrid from '../../molecules/product-grid';
 import Button from '../../atoms/button';
@@ -37,6 +38,14 @@ const SeeMore = styled(Button)`
 
 function GridArea() {
   const navigate = useNavigate();
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('http://168.75.77.79:5000/Product')
+      .then(response => response.json())
+      .then(data => setProducts(data.slice(0, 8))) // Pegando apenas os 8 primeiros produtos
+      .catch(error => console.error('Erro ao buscar produtos:', error));
+  }, []);
 
   const handleSeeMoreClick = () => {
     navigate('/products'); 
@@ -45,8 +54,12 @@ function GridArea() {
   return (
     <Container>
       <GridTitle>Novidades</GridTitle>
-      <ProductGrid productCount={4} />
-      <ProductGrid productCount={4} />
+      {products.length > 0 && (
+        <>
+          <ProductGrid productCount={4} products={products.slice(0, 4)} />
+          <ProductGrid productCount={4} products={products.slice(4, 8)} />
+        </>
+      )}
       <SeeMore onClick={handleSeeMoreClick}>Ver mais produtos</SeeMore>
     </Container>
   );

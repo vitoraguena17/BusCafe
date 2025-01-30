@@ -22,7 +22,7 @@ const Container = styled.section`
 
 const TitleMobile = styled(Title)`
     font-size: 1.2rem;
-`
+`;
 
 const Header = styled.div`
   display: flex;
@@ -35,12 +35,12 @@ const Header = styled.div`
 const Arrow = styled.span`
   font-size: 1rem;
   color: var(--dark-brown);
-  transform: ${({ isOpen }) => (isOpen ? "rotate(0deg)" : "rotate(-90deg)")};
+  transform: ${({ $isOpen }) => ($isOpen ? "rotate(0deg)" : "rotate(-90deg)")};
   transition: transform 0.3s ease-in-out;
 `;
 
 const Content = styled.div`
-  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
   flex-direction: column;
   justify-content: center;
   margin-top: 20px;
@@ -57,9 +57,9 @@ function ProductsAsideMobile() {
     <Container>
       <Header onClick={toggleOpen}>
         <TitleMobile>Filtros</TitleMobile>
-        <Arrow isOpen={isOpen}><FaChevronDown /></Arrow>
+        <Arrow $isOpen={isOpen}><FaChevronDown /></Arrow>
       </Header>
-      <Content isOpen={isOpen}>
+      <Content $isOpen={isOpen}>
         <ProductsSelect />
         <BrandFilter />
         <PriceFilter />
