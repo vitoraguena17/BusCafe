@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import ProductImage from '../../atoms/product-img';
-import { useNavigate } from 'react-router-dom';
+import styled from "styled-components";
+import ProductImage from "../../atoms/product-img";
+import { useNavigate } from "react-router-dom";
 
 const Card = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const Card = styled.div`
   }
 
   @media (max-width: 430px) {
-    width: 90%; 
+    width: 90%;
     border-width: 1px;
     padding: 10px;
   }
@@ -30,7 +30,7 @@ const ProductDesc = styled.div`
   text-align: center;
 
   @media (max-width: 430px) {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 `;
 
@@ -53,20 +53,25 @@ const ProductPrice = styled.div`
   }
 `;
 
+const ProductBrand = styled.p`
+  font-weight: 500;
+`
+
+
 function Product({ product, CustomCard }) {
   const CardComponent = CustomCard || Card;
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate('/product');
+    navigate("/product");
   };
 
   return (
     <CardComponent onClick={handleCardClick}>
       <ProductImage />
       <ProductDesc>
+        <ProductBrand>{product.brand}</ProductBrand>
         <p>{product.productName}</p>
-        <p>{product.brand}</p>
         <ProductPrice>
           <p>A partir de:</p>
           <p>
