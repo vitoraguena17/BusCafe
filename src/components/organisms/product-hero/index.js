@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ProductInformation from "../../molecules/product/product-information";
-import ProductDescription from "../../molecules/product/product-description";
+// import ProductDescription from "../../molecules/product/product-description";
 import ProductTable from "../../molecules/product/product-spec";
 import CardContent from "../../molecules/feature-card-content";
 
@@ -18,7 +18,7 @@ function ProductHero() {
     <Container>
       <ProductInformation />
       <CardContent />
-      <ProductDescription />
+      {/* <ProductDescription /> */}
       <ProductTable />
     </Container>
   );

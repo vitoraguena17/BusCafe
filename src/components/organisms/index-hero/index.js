@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Menu from '../../molecules/index-menu';
 import GridArea from '../../molecules/grid-area';
 
 const Container = styled.section`
@@ -14,7 +13,6 @@ const Container = styled.section`
 function IndexHero() {
     return (
         <Container>
-            <Menu />
             <GridArea />
         </Container>
     )

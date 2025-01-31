@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import ProductInformationTitle from "../product-title-info"
-import ProductImage from "../../../atoms/product-img"
-import Button from "../../../atoms/button"
+import styled from "styled-components";
+import ProductInformationTitle from "../product-title-info";
+import ProductImage from "../../../atoms/product-img";
+import Button from "../../../atoms/button";
 
 const Container = styled.section`
   display: flex;
@@ -15,34 +15,34 @@ const Container = styled.section`
   margin: 30px 0 20px 0;
 
   @media (max-width: 430px) {
-    width: 90%; 
+    width: 90%;
     padding: 0;
     flex-direction: column;
     align-items: center;
     margin: 20px 0 0 0;
   }
-`
+`;
 
 const Content = styled.div`
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-    @media (max-width: 430px) {
-      width: 100%; 
-      height: 250px;
+  @media (max-width: 430px) {
+    width: 100%;
+    height: 250px;
   }
-`
+`;
 
 const ProductImageInfo = styled(ProductImage)`
   width: 50%;
 
   @media (max-width: 430px) {
-    width: 100%; 
+    width: 100%;
   }
-`
+`;
 
 const ProductPrice = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ const ProductPrice = styled.div`
     font-weight: 300;
 
     @media (max-width: 430px) {
-      font-size: 1rem; 
+      font-size: 1rem;
     }
   }
 
@@ -65,17 +65,17 @@ const ProductPrice = styled.div`
     color: var(--dark-green);
 
     @media (max-width: 430px) {
-      font-size: 2.2rem; 
+      font-size: 2.2rem;
     }
   }
-`
+`;
 
 const ButtonBuy = styled(Button)`
   padding: 0 20% 0 20%;
   height: 50px;
   font-size: 1.8rem;
   margin-bottom: 30px;
-`
+`;
 
 function ProductInformation() {
   return (
@@ -92,7 +92,7 @@ function ProductInformation() {
         <ButtonBuy>Ir a loja</ButtonBuy>
       </Content>
     </Container>
-  )
+  );
 }
 
-export default ProductInformation
+export default ProductInformation;

@@ -83,6 +83,11 @@ function Product({ product, CustomCard }) {
     navigate("/product");
   };
 
+  const price =
+    product.minPrice && !isNaN(product.minPrice)
+      ? product.minPrice.toFixed(2)
+      : "0.00";
+
   return (
     <CardComponent onClick={handleCardClick}>
       <ProductImage />
@@ -92,7 +97,7 @@ function Product({ product, CustomCard }) {
         <ProductPrice>
           <p>A partir de:</p>
           <p>
-            <span>R$ {product.minPrice.toFixed(2)}</span>
+            <span>R$ {price}</span>
           </p>
         </ProductPrice>
       </ProductDesc>

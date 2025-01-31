@@ -1,9 +1,10 @@
-import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom'; 
-import { useEffect, useState } from 'react';
-import Title from '../../atoms/title';
-import ProductGrid from '../../molecules/product-grid';
-import Button from '../../atoms/button';
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Title from "../../atoms/title";
+import ProductGrid from "../../molecules/product-grid";
+import Button from "../../atoms/button";
+import Menu from "../index-menu";
 
 const Container = styled.section`
   display: flex;
@@ -14,7 +15,7 @@ const Container = styled.section`
 `;
 
 const GridTitle = styled(Title)`
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 `;
 
 const SeeMore = styled(Button)`
@@ -39,25 +40,80 @@ const SeeMore = styled(Button)`
 function GridArea() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    fetch('http://168.75.77.79:5000/Product')
-      .then(response => response.json())
-      .then(data => setProducts(data.slice(0, 8))) // Pegando apenas os 8 primeiros produtos
-      .catch(error => console.error('Erro ao buscar produtos:', error));
+    fetch("http://168.75.77.79:5000/Product")
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data);
+        setFilteredProducts(data);
+      })
+      .catch((error) => console.error("Erro ao buscar produtos:", error));
   }, []);
 
+  useEffect(() => {
+    const normalizeGrind = (grind) => {
+      const normalizedGrind = grind?.toLowerCase().replace(/\s+/g, ""); 
+      if (
+        normalizedGrind === "grão" ||
+        normalizedGrind === "grao" ||
+        normalizedGrind === "grãos" ||
+        normalizedGrind === "graos"
+      ) {
+        return "grão";
+      } else if (
+        normalizedGrind === "moído" ||
+        normalizedGrind === "moido" ||
+        normalizedGrind === "moídos" ||
+        normalizedGrind === "moidos"
+      ) {
+        return "moído";
+      } else {
+        return "outros";
+      }
+    };
+
+    if (filter === "Grão") {
+      setFilteredProducts(
+        products.filter((product) => normalizeGrind(product.grind) === "grão")
+      );
+    } else if (filter === "Moído") {
+      setFilteredProducts(
+        products.filter((product) => normalizeGrind(product.grind) === "moído")
+      );
+    } else if (filter === "Outros") {
+      setFilteredProducts(
+        products.filter(
+          (product) =>
+            normalizeGrind(product.grind) !== "grão" &&
+            normalizeGrind(product.grind) !== "moído"
+        )
+      );
+    } else {
+      setFilteredProducts(products);
+    }
+  }, [filter, products]);
+
   const handleSeeMoreClick = () => {
-    navigate('/products'); 
+    navigate("/products");
   };
 
   return (
     <Container>
+      <Menu setFilter={setFilter} />
       <GridTitle>Novidades</GridTitle>
-      {products.length > 0 && (
+      {filteredProducts.length > 0 && (
         <>
-          <ProductGrid productCount={4} products={products.slice(0, 4)} />
-          <ProductGrid productCount={4} products={products.slice(4, 8)} />
+          <ProductGrid
+            productCount={4}
+            products={filteredProducts.slice(0, 4)}
+          />
+          <ProductGrid
+            productCount={4}
+            products={filteredProducts.slice(4, 8)}
+          />
         </>
       )}
       <SeeMore onClick={handleSeeMoreClick}>Ver mais produtos</SeeMore>
