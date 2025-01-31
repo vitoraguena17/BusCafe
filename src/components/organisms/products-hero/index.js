@@ -40,7 +40,7 @@ const ProductsBox = styled.aside`
 function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
   const isMobile = useMediaQuery({ maxWidth: 1000 });
   const itemsPerGrid = isMobile ? 2 : productsPerGrid;
-  
+
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
       try {
         const response = await fetch("http://168.75.77.79:5000/Product");
         const data = await response.json();
-        setProducts(data.slice(0, totalProducts)); // Carrega todos os produtos de uma vez
+        setProducts(data.slice(0, totalProducts)); 
       } catch (error) {
         console.error("Erro ao buscar produtos:", error);
       }
@@ -57,7 +57,6 @@ function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
     fetchProducts();
   }, [totalProducts]);
 
-  // Divide os produtos em grids de acordo com o número de colunas
   const grids = [];
   for (let i = 0; i < products.length; i += itemsPerGrid) {
     grids.push(products.slice(i, i + itemsPerGrid));
@@ -71,7 +70,7 @@ function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
         <ProductsAside />
         <ProductsBox>
           {grids.map((group, index) => (
-            <ProductGrid key={index} products={group} />
+            <ProductGrid key={index} products={group} width="100%" />
           ))}
         </ProductsBox>
       </Content>

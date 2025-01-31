@@ -6,7 +6,7 @@ const ProductSection = styled.section`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: ${(props) => props.width || "80%"};
   margin: 10px;
   gap: 10px;
 
@@ -23,9 +23,9 @@ const ProductSection = styled.section`
   }
 `;
 
-function ProductGrid({ products = [], customCard = null }) {
+function ProductGrid({ products = [], customCard = null, width }) {
   return (
-    <ProductSection>
+    <ProductSection width={width}>
       {products.map((product) => (
         <Product key={product.id} product={product} CustomCard={customCard} />
       ))}
