@@ -7,19 +7,24 @@ const Card = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 25%;
+  min-width: 25%;
   padding: 30px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  min-height: 450px;
 
   &:hover {
     transform: scale(1.02);
   }
 
+  @media (max-width: 768px) {
+    width: 48%;
+  }
+
   @media (max-width: 430px) {
-    width: 90%;
+    width: 100%;
     border-width: 1px;
     padding: 10px;
   }
@@ -28,6 +33,19 @@ const Card = styled.div`
 const ProductDesc = styled.div`
   margin-top: 20px;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
 
   @media (max-width: 430px) {
     margin-top: 10px;
@@ -55,8 +73,7 @@ const ProductPrice = styled.div`
 
 const ProductBrand = styled.p`
   font-weight: 500;
-`
-
+`;
 
 function Product({ product, CustomCard }) {
   const CardComponent = CustomCard || Card;

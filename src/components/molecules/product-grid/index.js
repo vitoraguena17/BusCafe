@@ -6,7 +6,7 @@ const ProductSection = styled.section`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: ${(props) => props.width || "80%"};
+  width: 80%;
   margin: 10px;
   gap: 10px;
 

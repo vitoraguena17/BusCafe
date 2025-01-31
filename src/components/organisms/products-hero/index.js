@@ -48,7 +48,7 @@ function ProductsHero({ totalProducts = 12, productsPerGrid = 3 }) {
       try {
         const response = await fetch("http://168.75.77.79:5000/Product");
         const data = await response.json();
-        setProducts(data.slice(0, totalProducts)); 
+        setProducts(data.slice(0, totalProducts));
       } catch (error) {
         console.error("Erro ao buscar produtos:", error);
       }
